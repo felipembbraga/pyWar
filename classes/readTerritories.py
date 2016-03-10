@@ -19,8 +19,4 @@ def readFile(filename):
                 continent = next((c for c in continents if c.id == obj[4]))
                 local = obj[:1] + obj[2:-2] + [continent] + [obj[-1].split()]
                 locais.append(Local(*local))
-    for local in locais:
-        print local
-
-if __name__ == '__main__':
-    readFile('territories.txt')
+    return locais

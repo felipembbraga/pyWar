@@ -26,12 +26,11 @@ class DeckTestCase(unittest.TestCase):
 
     def testDeck(self):
         try:
-            from classes.deck import Deck
+            from classes.game import Game
         except ImportError, e:
             self.fail('Class doesn\'t exists.')
 
-        deck = Deck()
-
-        self.assertEqual(deck[1].place, 'joker', 'Carta errada')
+        game= Game()
+        self.assertEqual(len(game.deck), 44, 'Carta errada')
 if __name__ == '__main__':
     unittest.main()
